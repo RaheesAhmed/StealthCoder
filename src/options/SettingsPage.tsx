@@ -118,11 +118,12 @@ const SettingsPage: React.FC = () => {
               onChange={handleChange}
             >
               <option value="gemini">Google Gemini 2.0 Flash</option>
-              <option value="claude">Claude 3.7 Sonnet</option>
+              <option value="claude">Claude 3.7 Sonnet (Mock Response)</option>
               <option value="gpt4">GPT-4</option>
             </select>
             <div className="form-help">
-              Choose which AI model to use for generating coding help
+              Choose which AI model to use for generating coding help.
+              Note: Due to CORS limitations, Claude will provide a mock response.
             </div>
           </div>
 

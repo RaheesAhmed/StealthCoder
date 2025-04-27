@@ -136,12 +136,50 @@ async function callGeminiAPI(prompt: string, apiKey: string): Promise<string> {
 // Claude API implementation
 async function callClaudeAPI(prompt: string, apiKey: string): Promise<string> {
   try {
+    // Create a mock response for testing purposes
+    // This is a temporary solution until we can implement a proper proxy
+    console.log("Using mock Claude response due to CORS limitations", { promptLength: prompt.length, apiKeyProvided: !!apiKey });
+
+    // Simulate a delay to mimic API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    // Return a mock response
+    return `# Claude Analysis (Mock Response)
+
+## Problem Understanding
+I'm analyzing your coding problem. Due to CORS limitations in Chrome extensions,
+this is a mock response. In a real implementation, we would need to use a proxy server
+or a different approach to make API calls to Claude.
+
+## Solution Approach
+For now, please use the GPT-4 model which is working correctly.
+
+## Code Solution
+\`\`\`javascript
+// This is a mock solution
+function solveProblem(input) {
+  // Your solution would go here
+  return "Solution";
+}
+\`\`\`
+
+## Next Steps
+To fix the Claude API integration, consider:
+1. Using a proxy server
+2. Using a Chrome extension API like chrome.runtime.sendNativeMessage
+3. Implementing a local server that handles the API calls
+
+For now, please use GPT-4 which is working correctly.`;
+
+    /*
+    // This is the original implementation that doesn't work due to CORS
+    // Keeping it here for reference
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01'
+        'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
         model: 'claude-3-7-sonnet-20250219',
@@ -170,6 +208,7 @@ async function callClaudeAPI(prompt: string, apiKey: string): Promise<string> {
     } else {
       throw new Error('Unexpected response format from Claude API');
     }
+    */
   } catch (error: unknown) {
     console.error('Claude API error:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';

@@ -56,7 +56,7 @@ const Popup: React.FC = () => {
               <div className="info-label">AI Model:</div>
               <div className="info-value">
                 {settings?.model === 'gemini' ? 'Google Gemini 2.0 Flash' :
-                 settings?.model === 'claude' ? 'Claude 3.7 Sonnet' :
+                 settings?.model === 'claude' ? 'Claude 3.7 Sonnet (Mock)' :
                  settings?.model === 'gpt4' ? 'GPT-4' :
                  settings?.model || 'Not set'}
               </div>
