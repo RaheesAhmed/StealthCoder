@@ -63,8 +63,8 @@ It uses top AI models like Google Gemini 2.5 and Claude Sonnet — and is design
 ### Clone this repo:
 
 ```bash
-git clone https://github.com/yourusername/stealthcoder-extension.git
-cd stealthcoder-extension
+git clone https://github.com/RaheesAhmed/StealthCoder.git
+cd StealthCoder
 ```
 
 ### Install dependencies:
