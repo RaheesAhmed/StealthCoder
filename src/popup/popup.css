@@ -1,0 +1,134 @@
+body {
+  width: 320px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+#root {
+  height: 100%;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff9d;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.content {
+  flex: 1;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00ff9d;
+}
+
+.info-box {
+  background-color: rgba(0, 255, 157, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.info-label {
+  color: #999;
+}
+
+.info-value {
+  font-weight: bold;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #00ff9d;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #00cc7d;
+}
+
+.button.secondary {
+  background-color: transparent;
+  border: 1px solid #00ff9d;
+  color: #00ff9d;
+}
+
+.button.secondary:hover {
+  background-color: rgba(0, 255, 157, 0.1);
+}
+
+.footer {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shortcut-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.shortcut-key {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
+  font-family: monospace;
+}

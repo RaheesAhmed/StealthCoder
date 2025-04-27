@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "StealthCoder",
+  "version": "1.0.0",
+  "description": "⚡ StealthCoder - Your Invisible Coding Assistant for LeetCode & Interviews",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.leetcode.com/*",
+        "*://*.hackerrank.com/*",
+        "*://*.codesignal.com/*",
+        "*://*.codingame.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "src/options/index.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "toggle-stealth-mode": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A"
+      },
+      "description": "Toggle stealth mode"
+    }
+  }
+}
