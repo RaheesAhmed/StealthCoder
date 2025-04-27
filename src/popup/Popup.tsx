@@ -54,7 +54,12 @@ const Popup: React.FC = () => {
           <div className="info-box">
             <div className="info-item">
               <div className="info-label">AI Model:</div>
-              <div className="info-value">{settings?.model || 'Not set'}</div>
+              <div className="info-value">
+                {settings?.model === 'gemini' ? 'Google Gemini 2.0 Flash' :
+                 settings?.model === 'claude' ? 'Claude 3.7 Sonnet' :
+                 settings?.model === 'gpt4' ? 'GPT-4' :
+                 settings?.model || 'Not set'}
+              </div>
             </div>
             <div className="info-item">
               <div className="info-label">API Key:</div>
@@ -68,8 +73,8 @@ const Popup: React.FC = () => {
         <div className="section">
           <div className="section-title">How to Use</div>
           <div className="shortcut-info">
-            Press <span className="shortcut-key">Ctrl</span> + 
-            <span className="shortcut-key">Shift</span> + 
+            Press <span className="shortcut-key">Ctrl</span> +
+            <span className="shortcut-key">Shift</span> +
             <span className="shortcut-key">A</span> on any coding problem
             to get instant AI help.
           </div>
@@ -78,10 +83,10 @@ const Popup: React.FC = () => {
         <button className="button" onClick={openOptionsPage}>
           Settings
         </button>
-        
-        <a 
-          href="https://github.com/raheesahmed/stealthcoder-extension" 
-          target="_blank" 
+
+        <a
+          href="https://github.com/raheesahmed/stealthcoder-extension"
+          target="_blank"
           rel="noopener noreferrer"
           className="button secondary"
         >
